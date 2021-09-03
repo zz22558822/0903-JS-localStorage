@@ -69,11 +69,13 @@ function updataList(items) {
 
 
 function delData(e) {
+    // 取消預設觸發行為
+    e.preventDefault();
     //如果不是點擊 .list 內的 A連結，則回傳空值強制停止 function
     if (e.target.nodeName !== 'A') {
         return
     }
-    // 刪除點擊當下的列表號碼(e.target.dataset.itenNum) , 數量1個
+    // 刪除點擊當下的列表號碼(e.target.dataset.itenNum)注意不可以有大寫 , 數量1個
     data.splice(e.target.dataset.itennum,1);
     // 更新資料顯示
     updataList(data);
