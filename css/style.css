@@ -125,6 +125,7 @@ body {
 .wrap .list {
   padding-top: 20px;
   font-weight: bold;
+  width: 100%;
 }
 
 .wrap .list span {
@@ -175,6 +176,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
