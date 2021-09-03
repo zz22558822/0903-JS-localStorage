@@ -74,7 +74,7 @@ function delData(e) {
         return
     }
     // 刪除點擊當下的列表號碼(e.target.dataset.itenNum) , 數量1個
-    data.splice(e.target.dataset.itenNum,1);
+    data.splice(e.target.dataset.itennum,1);
     // 更新資料顯示
     updataList(data);
     // 新增資料到 localStorage
