@@ -1,0 +1,180 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 讓圖片自適應容器最大寬度 高度自動 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域設定 border box */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*---------------------------------------*/
+/* RWD用 */
+body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.wrap {
+  width: 780px;
+  margin: 100px auto;
+  padding: 50px 20px;
+  background: #FFF;
+  border: 5px solid salmon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrap .text {
+  width: 70%;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 9px;
+  margin-right: 3%;
+  outline: none;
+}
+
+.wrap .text:focus {
+  border: 2px solid orangered;
+}
+
+@media (max-width: 767px) {
+  .wrap .text {
+    width: 100%;
+    margin-right: 2px;
+  }
+}
+
+.wrap .btn {
+  width: 25%;
+  padding: 10px;
+  background: orangered;
+  color: #FFF;
+  font-size: 20px;
+  border: none;
+}
+
+.wrap .btn:hover {
+  background: red;
+}
+
+@media (max-width: 767px) {
+  .wrap .btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.wrap .list {
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.wrap .list span {
+  font-size: 30px;
+}
+
+.wrap .list li {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  line-height: 2.2em;
+}
+
+.wrap .list .li-Del {
+  font-size: 18px;
+  color: red;
+  margin-right: 15px;
+  text-decoration: none;
+  padding: 5px;
+  border: 1px solid orangered;
+}
+
+.wrap .list .li-Del:hover {
+  background: red;
+  color: #FFF;
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    width: 100%;
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrap .textbox {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
