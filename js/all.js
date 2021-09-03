@@ -30,6 +30,15 @@ function addData(e) {
         alert('長度超過25個字元，請縮減。')
         return;
     }
+    // 判斷是否重複
+    for (var i = 0; i < data.length; i++) {
+        if (text.value == data[i].content) {
+            alert('已有相同資料重複，請確認輸入資料。')
+            // 清空輸入框
+            text.value = '';
+            return;
+        }
+    }
     // 使用todo為 陣列 { content : 輸入框的內容 }
     var todo = {
         content : text.value
@@ -39,6 +48,8 @@ function addData(e) {
     updataList(data);
     // 新增資料到 localStorage
     localStorage.setItem('listData',JSON.stringify(data));
+    // 清空輸入框
+    text.value = '';
 }
 
 
